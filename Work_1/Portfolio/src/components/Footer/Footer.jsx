@@ -10,7 +10,7 @@ export default function Footer() {
     : (classNameByTheme = "layoutLight");
   return (
     <footer className={classNameByTheme}>
-      <p>@2026, LDA 2020202002022020202</p>
+      <p>@2026, LDA</p>
     </footer>
   );
 }

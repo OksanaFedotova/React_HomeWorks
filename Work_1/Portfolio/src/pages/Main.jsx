@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout";
 import Footer from "../components/Footer/Footer";
 import Modal from "../components/Modal/Modal";
 import MainContextContainer from "../components/MainContextContainer/MainContextContainer";
+import Slider from "../components/Slider/Slider";
 
 export default function Main() {
   const [isModalVisible, setModalVisible] = useState(false);

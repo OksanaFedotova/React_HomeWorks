@@ -5,26 +5,17 @@ import { useNavigate, useParams } from "react-router-dom";
 
 export default function BlogPost() {
   let navigate = useNavigate();
-  let { id: planetId } = useParams();
-  const [planet, setPlanet] = useState([]);
+  let { id } = useParams();
+  const [quote, setQuote] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const data = await fetch(
-        `https://api.api-ninjas.com/v1/planets?name=${planetId}`,
-        {
-          method: "GET",
-          headers: {
-            "X-Api-Key": "becwfveebgFVu9ngZP5cwq5MClC0FpDJN4ak2L0T",
-            "Content-Type": "application/json",
-          },
-        },
-      );
-      const planetJSON = await data.json();
-
-      setPlanet(planetJSON);
+      const data = await (
+        await fetch(`http://localhost:3000/api/quotes/${id}`)
+      ).json();
+      setQuote(data);
     };
     getData();
-  }, [planetId]);
+  }, [id]);
   return (
     <Layout>
       <Button
@@ -32,9 +23,7 @@ export default function BlogPost() {
         disabled={false}
         onClick={() => navigate("/")}
       />
-      {planet.map(({ name }, i) => (
-        <div key={name}>{name}</div>
-      ))}
+      <div key={id}>{quote.text + "; -" + quote.author}</div>
     </Layout>
   );
 }
