@@ -1,0 +1,9 @@
+.line {
+  border: solid rgb(250, 158, 0) 2px;
+  width: 15px;
+  height: 3px;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 158, 0);
+}

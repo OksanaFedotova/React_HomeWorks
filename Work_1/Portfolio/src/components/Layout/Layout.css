@@ -1,0 +1,14 @@
+.layoutDark {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  justify-content: center;
+}
+.layoutLight {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 176, 42);
+  justify-content: center;
+}

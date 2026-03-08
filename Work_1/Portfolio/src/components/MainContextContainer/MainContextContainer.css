@@ -1,0 +1,13 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.mainContainer__image {
+  width: 35%;
+  height: 79.5vh;
+}
+.mainContainer__info {
+  padding: 20px 20px;
+  font-size: 1.2em;
+}

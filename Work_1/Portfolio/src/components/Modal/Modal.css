@@ -1,0 +1,12 @@
+.modal {
+  display: flex;
+  flex-direction: row;
+}
+
+.modal img {
+  position: relative;
+  top: -5px;
+  right: -5px;
+  height: 15px;
+  width: 15px;
+}
