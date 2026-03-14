@@ -1,6 +1,9 @@
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { setTheme } from "../../redux/themeSlice";
 
 export default function Header( props ) {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   return (
     <div className="navigate-controls">
@@ -20,6 +23,7 @@ export default function Header( props ) {
             props.setTextBanner("Необходимо зарегистрироваться или войти!");
         }
         }>Список дел</button>
+        <button onClick={() => dispatch(setTheme())}>Переключить тему</button>
     </div>
   );
 }

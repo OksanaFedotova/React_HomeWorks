@@ -11,12 +11,13 @@ const box = {
   backgroundColor: "#3a3a3a"
 }
 
-export default function Main(props) {
+export default function Main({ setTextBanner, isLogin, textBanner}) {
+
   return (
     <Fragment>
-      <Header setTextBanner={props.setTextBanner} isLogin={props.isLogin} />
+      <Header setTextBanner={setTextBanner} isLogin={isLogin} />
       <Layout>
-        <p>{props.textBanner}</p>
+        <p>{textBanner}</p>
       <motion.div
                   style={box}
                   animate={{ rotate: 360, scale: 0.5}}                

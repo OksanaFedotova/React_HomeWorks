@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./Button.css";
 
 export default function Button({ label, disabled, onClick }) {
@@ -10,9 +9,3 @@ export default function Button({ label, disabled, onClick }) {
     </>
   );
 }
-
-Button.PropTypes = {
-  label: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-};
